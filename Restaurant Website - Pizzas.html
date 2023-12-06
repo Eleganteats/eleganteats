@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<head>
+	<title>Elegant Eats</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="Restaurant CSS.css">
+
+	<script type="text/javascript" src="Restaurant JS.js"></script>
+
+	<script type="text/javascript">
+		function FindPepperoniQty()
+		{
+			var selectedQty = document.getElementById("pepperoni qty").value;
+			if(selectedQty==0)
+			{
+				document.getElementById("pepperoniTotal").innerHTML = "";
+			}
+			else
+			{
+				document.getElementById("pepperoniTotal").innerHTML = "Total: $" + selectedQty*12;
+			}
+		}
+		
+		function FindMeatLoversQty()
+		{
+			var selectedQty = document.getElementById("meat lovers qty").value;
+			if(selectedQty==0)
+			{
+				document.getElementById("meatLoversTotal").innerHTML = "";
+			}
+			else
+			{
+				document.getElementById("meatLoversTotal").innerHTML = "Total: $" + selectedQty*15;
+			}
+		}
+		
+		function FindCheeseQty()
+		{
+			var selectedQty = document.getElementById("cheese qty").value;
+			if(selectedQty==0)
+			{
+				document.getElementById("cheeseTotal").innerHTML = "";
+			}
+			else
+			{
+				document.getElementById("cheeseTotal").innerHTML = "Total: $" + selectedQty*10;
+			}
+		}
+		
+		function FindVegetarianQty()
+		{
+			var selectedQty = document.getElementById("vegetarian qty").value;
+			if(selectedQty==0)
+			{
+				document.getElementById("vegetarianTotal").innerHTML = "";
+			}
+			else
+			{
+				document.getElementById("vegetarianTotal").innerHTML = "Total: $" + selectedQty*12;
+			}
+		}
+		
+		function FindHawaiianQty()
+		{
+			var selectedQty = document.getElementById("hawaiian qty").value;
+			if(selectedQty==0)
+			{
+				document.getElementById("hawaiianTotal").innerHTML = "";
+			}
+			else
+			{
+				document.getElementById("hawaiianTotal").innerHTML = "Total: $" + selectedQty*12;
+			}
+		}
+		
+		function FindBBQTotal()
+		{
+			var selectedQty = document.getElementById("bbq chicken qty").value;
+			if(selectedQty==0)
+			{
+				document.getElementById("bbqTotal").innerHTML = "";
+			}
+			else
+			{
+				document.getElementById("bbqTotal").innerHTML = "Total: $" + selectedQty*16;
+			}
+		}
+		
+		function AddPepperoniToCart()
+		{
+			var selectedQty = document.getElementById("pepperoni qty").value;
+			if(selectedQty==0)
+			{
+				alert("Please select a qty first.");
+				return;
+			}
+			document.getElementById("showAlert").style.display = 'block';
+			setTimeout(RemoveNotification, 3000);
+		}
+		
+		function AddMeatLoversToCart()
+		{
+			var selectedQty = document.getElementById("meat lovers qty").value;
+			if(selectedQty==0)
+			{
+				alert("Please select a qty first.");
+				return;
+			}
+			document.getElementById("showAlert").style.display = 'block';
+			setTimeout(RemoveNotification, 3000);
+		}
+		
+		function AddVegetarianToCart()
+		{
+			var selectedQty = document.getElementById("vegetarian qty").value;
+			if(selectedQty==0)
+			{
+				alert("Please select a qty first.");
+				return;
+			}
+			document.getElementById("showAlert").style.display = 'block';
+			setTimeout(RemoveNotification, 3000);
+		}
+		
+		function AddCheeseToCart()
+		{
+			var selectedQty = document.getElementById("cheese qty").value;
+			if(selectedQty==0)
+			{
+				alert("Please select a qty first.");
+				return;
+			}
+			document.getElementById("showAlert").style.display = 'block';
+			setTimeout(RemoveNotification, 3000);
+		}
+		
+		function AddHawaiianToCart()
+		{
+			var selectedQty = document.getElementById("hawaiian qty").value;
+			if(selectedQty==0)
+			{
+				alert("Please select a qty first.");
+				return;
+			}
+			document.getElementById("showAlert").style.display = 'block';
+			setTimeout(RemoveNotification, 3000);
+		}
+		
+		function AddBBQChickenToCart()
+		{
+			var selectedQty = document.getElementById("bbq chicken qty").value;
+			if(selectedQty==0)
+			{
+				alert("Please select a qty first.");
+				return;
+			}
+			document.getElementById("showAlert").style.display = 'block';
+			setTimeout(RemoveNotification, 3000);
+		}
+		
+		function RemoveNotification()
+		{
+			document.getElementById("showAlert").style.display = 'none';
+		}
+	</script>
+
+</head>
+<body>
+	<div class="navbar">
+		<a class="split" href="Restaurant Website - Home Page.html">Home</a>
+		<a href="Restaurant Website - Cart.html">Cart</a>
+		<a href="Restaurant Website - Drinks.html">Drinks</a>
+		<a href="Restaurant Website - Desserts.html">Desserts</a>
+		<a>Pizzas</a>
+	</div>
+	<div class="main">
+		
+		<h1>Pizzas</h1>
+		<p>Straight from the chef's kitchen, these pizzas are sure to cause a party for the tastebuds.</p>
+		
+		<div id="showAlert" style="display:none">
+			<div class="alert alert-success alert-dismissible fade show" role="alert">
+			  Successfully added to cart.
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-4">
+				<div class="card" >
+				  <img src="PizzaImages/pepperoni.jpg" class="card-img-top" alt="pepperoni pizza">
+				  <div class="card-body">
+					<h5 class="card-title">Pepperoni Pizza - $12</h5>
+					<p class="card-text">If you're feeling saucy, spend some thyme with this pizza.</p>
+					<p style="display:inline-block">
+					<select id="pepperoni qty" class="form-select mb-2" style="width:8em" onchange="FindPepperoniQty()">
+						<option value="0" selected>Select qty</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+					</select>
+					</p>
+					<!--<a href="#" class="btn btn-primary" onclick="AddPepperoniToCart()">Add to cart</a>-->
+					<button type="button" class="btn btn-primary" onclick="AddPepperoniToCart()">Add to cart</button>
+					<p id="pepperoniTotal" style="display:inline-block; margin-left:4px;"></p>
+				  </div>
+				</div>
+			</div>
+				
+			<div class="col-4">
+				<div class="card" >
+				  <img src="PizzaImages/meat lovers.jpg" class="card-img-top" alt="Meat Lovers Pizza">
+				  <div class="card-body">
+					<h5 class="card-title">Meat Lovers Pizza - $15</h5>
+					<p class="card-text">So, we meat again.</p>
+					<p style="display:inline-block">
+					<select id="meat lovers qty" class="form-select mb-2" style="width:8em" onchange="FindMeatLoversQty()">
+						<option value="0" selected>Select qty</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+					</select>
+					</p>
+					<!--<a href="#" class="btn btn-primary">Add to cart</a>-->
+					<button type="button" class="btn btn-primary" onclick="AddMeatLoversToCart()">Add to cart</button>
+					<p id="meatLoversTotal" style="display:inline-block; margin-left:4px;"></p>
+				  </div>
+				</div>
+			</div>
+			
+			<div class="col-4">
+				<div class="card" >
+				  <img src="PizzaImages/vegetarian.jpg" class="card-img-top" alt="Vegetarian Pizza">
+				  <div class="card-body">
+					<h5 class="card-title">Vegetarian Pizza - $12</h5>
+					<p class="card-text">This choice will be no missed-steak!</p>
+					<p style="display:inline-block">
+					<select id="vegetarian qty" class="form-select mb-2" style="width:8em" onchange="FindVegetarianQty()">
+						<option value="0" selected>Select qty</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+					</select>
+					</p>
+					<!--<a href="#" class="btn btn-primary">Add to cart</a>-->
+					<button type="button" class="btn btn-primary" onclick="AddVegetarianToCart()">Add to cart</button>
+					<p id="vegetarianTotal" style="display:inline-block; margin-left:4px;"></p>
+				  </div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-4">
+				<div class="card" >
+				  <img src="PizzaImages/cheese pizza.jpg" class="card-img-top" alt="Cheese Pizza">
+				  <div class="card-body">
+					<h5 class="card-title">Cheese Pizza - $10</h5>
+					<p class="card-text">Cheese is the only grate topping for this pizza.</p>
+					<p style="display:inline-block">
+					<select id="cheese qty" class="form-select mb-2" style="width:8em" onchange="FindCheeseQty()">
+						<option value="0" selected>Select qty</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+					</select>
+					</p>
+					<!--<a href="#" class="btn btn-primary">Add to cart</a>-->
+					<button type="button" class="btn btn-primary" onclick="AddCheeseToCart()">Add to cart</button>
+					<p id="cheeseTotal" style="display:inline-block; margin-left:4px;"></p>
+				  </div>
+				</div>
+			</div>
+				
+			<div class="col-4">
+				<div class="card" >
+				  <img src="PizzaImages/hawaiian.jpg" class="card-img-top" alt="Hawaiian Pizza">
+				  <div class="card-body">
+					<h5 class="card-title">Hawaiian Pizza - $12</h5>
+					<p class="card-text">Topped with our finest ham and pineapple, this pizza is sure to a-peel to the tastebuds.</p>
+					<p style="display:inline-block">
+					<select id="hawaiian qty" class="form-select mb-2" style="width:8em" onchange="FindHawaiianQty()">
+						<option value="0" selected>Select qty</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+					</select>
+					</p>
+					<!--<a href="#" class="btn btn-primary">Add to cart</a>-->
+					<button type="button" class="btn btn-primary" onclick="AddHawaiianToCart()">Add to cart</button>
+					<p id="hawaiianTotal" style="display:inline-block; margin-left:4px;"></p>
+				  </div>
+				</div>
+			</div>
+			
+			<div class="col-4">
+				<div class="card" >
+				  <img src="PizzaImages/bbq chicken.jpg" class="card-img-top" alt="BBQ Chicken Pizza">
+				  <div class="card-body">
+					<h5 class="card-title">BBQ Chicken Pizza - $16</h5>
+					<p class="card-text">Our most eggstraordinary and cluck-tastic pizza we offer.</p>
+					<p style="display:inline-block">
+					<select id="bbq chicken qty" class="form-select mb-2" style="width:8em" onchange="FindBBQTotal()">
+						<option value="0" selected>Select qty</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+					</select>
+					</p>
+					<!--<a href="#" class="btn btn-primary">Add to cart</a>-->
+					<button type="button" class="btn btn-primary" onclick="AddBBQChickenToCart()">Add to cart</button>
+					<p id="bbqTotal" style="display:inline-block; margin-left:4px;"></p>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>

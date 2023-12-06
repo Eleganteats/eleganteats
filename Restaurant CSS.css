@@ -1,0 +1,84 @@
+body {
+		background-color:#f2f2f2;
+	}
+	
+	.main {
+		margin-top:1em;
+		margin-left:2em;
+		margin-right:2em;
+		/*background-image: url("pizza shop.jpg");
+		background-repeat:no-repeat;
+		background-size:cover;*/
+	}
+	
+	.navbar {
+		background-color:teal;
+		padding:0.3em;
+		margin:2px;
+		position: fixed:
+		top: 0;
+		width: 100%;
+		positon:fixed;
+		
+		content: "";
+		clear: both;
+		display: table;
+	}
+	
+	.navbar a {
+		float:right;
+		display:block;
+		padding:0.3em;
+		text-decoration:none;
+		color:white;
+		text-align:center;
+		font-family:verdana;
+		/*text-align:right;*/
+	}
+	
+	.navbar a:hover {
+		background-color:gray;
+	}
+	
+	.navbar a.split{
+		float:left;
+		/*text-align:left;*/
+	}
+	
+	.main h1 {
+		text-align:center;
+		font-size:3em;
+	}
+	
+	img.test {
+		width:90%;
+		display:block;
+		margin-left:auto;
+		margin-right:auto;
+		/*opacity:0.2;*/
+	}
+	
+	div.card{
+		width:28em;
+		margin:1em;
+	}
+	
+	div.alert{
+		color:teal;
+	}
+	
+	/*a.btn-primary{
+		background-color:teal;
+	}
+	
+	a.btn-primary:hover{
+		background-color:#004c4c;
+	}*/
+	
+	button.btn-primary{
+		background-color:teal;
+	}
+	
+	button.btn-primary:hover{
+		background-color:#004c4c;
+	}

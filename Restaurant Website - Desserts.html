@@ -1,0 +1,299 @@
+<html>
+<head>
+  <title>Elegant Eats</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">	<link rel="stylesheet" href="Restaurant CSS.css">
+	<link rel="stylesheet" href="Restaurant CSS.css">
+  
+  <style>
+    .card1 {
+      display: inline-block;
+      text-align: center;
+      margin: 10px;
+    }
+	
+	.card1 img {
+      width: 25em;
+      height: 25em;
+    }
+
+div.card1 {
+background-color:white;
+}
+
+</style>
+
+<script>
+function findsundaeQty() {
+  var quantity = parseInt(document.getElementById("sundaequantity").value);
+  var price = 7; // Price per item
+
+  if (quantity > 0) {
+    var totalPrice = quantity * price;
+    document.getElementById("sundaetotalPrice").textContent = "$" + totalPrice;
+  } else {
+    document.getElementById("sundaetotalPrice").textContent = "";
+  }
+}
+
+function findapplepieQty() {
+  var quantity = parseInt(document.getElementById("applepiequantity").value);
+  var price = 8; // Price per item
+
+  if (quantity > 0) {
+    var totalPrice = quantity * price;
+    document.getElementById("applepietotalPrice").textContent = "$" + totalPrice;
+  } else {
+    document.getElementById("applepietotalPrice").textContent = "";
+  }
+}
+
+function findlavacakeQty() {
+  var quantity = parseInt(document.getElementById("lavacakequantity").value);
+  var price = 8; // Price per item
+
+  if (quantity > 0) {
+    var totalPrice = quantity * price;
+    document.getElementById("lavacaketotalPrice").textContent = "$" + totalPrice;
+  } else {
+    document.getElementById("lavacaketotalPrice").textContent = "";
+  }
+}
+
+function findpecanpieQty() {
+  var quantity = parseInt(document.getElementById("pecanpiequantity").value);
+  var price = 7; // Price per item
+
+  if (quantity > 0) {
+    var totalPrice = quantity * price;
+    document.getElementById("pecanpietotalPrice").textContent = "$" + totalPrice;
+  } else {
+    document.getElementById("pecanpietotalPrice").textContent = "";
+  }
+}
+
+function findbananasplitQty() {
+  var quantity = parseInt(document.getElementById("bananaquantity").value);
+  var price = 9; // Price per item
+
+  if (quantity > 0) {
+    var totalPrice = quantity * price;
+    document.getElementById("bananasplittotalPrice").textContent = "$" + totalPrice;
+  } else {
+    document.getElementById("bananasplittotalPrice").textContent = "";
+  }
+}
+
+function findstrawberryshortcakeQty() {
+  var quantity = parseInt(document.getElementById("strawquantity").value);
+  var price = 6; // Price per item
+
+  if (quantity > 0) {
+    var totalPrice = quantity * price;
+    document.getElementById("shortcaketotalPrice").textContent = "$" + totalPrice;
+  } else {
+    document.getElementById("shortcaketotalPrice").textContent = "";
+  }
+}
+</script>
+</head> 
+<body>
+
+<div class="navbar">
+		<a class="split" href="Restaurant Website - Home Page.html">Home</a>
+		<a href="Restaurant Website - Cart.html">Cart</a>
+		<a href="Restaurant Website - Drinks.html">Drinks</a>
+		<a>Desserts</a>
+		<a href="Restaurant Website - Pizzas.html">Pizzas</a>
+	</div>
+	
+<div class="main">
+<h1>Desserts</h1>
+<p>Treat yourself to a delightful selection of desserts that will leave you wanting more.</p>
+	
+<div class="row">
+	<div class="col-4">
+		<div class="card1" style="width: 25rem;">
+		  <img src="DessertImages/icecreamsundae.jpg" class="card-img-top" alt="Sundae">
+		  <div class="card-body">
+			<h5 class="card-title">Icecream Sundae - $7</h5>
+			<p class="card-text">Our Icecream Sundae is a Sundae-fantastic. It's so good, it'll make you scream for more!</p>
+		  <select id="sundaequantity" onchange="findsundaeQty()"> 
+			<option value="0">Select qty</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+		  </select>
+		  <p>Total: <span id="sundaetotalPrice"></span></p> 
+		  <button type="button" class="btn btn-primary" onclick="addToCart()">Add to Cart</button>
+		  </div>
+		</div> 
+	</div> 
+	
+	<div class="col-4">
+		<div class="card1" style="width: 25rem">
+		  <img src="DessertImages/aplpie.jpg" class="card-img-top" alt="Apple Pie">
+		  <div class="card-body">
+			<h5 class="card-title">Apple Pie - $8</h5>
+			<p class="card-text">Our apple pie is apple-solutely amazing.</br>It's the core of a perfect dessert!</p>
+		  <select id="applepiequantity" onchange="findapplepieQty()"> 
+			<option value="0">Select qty</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+		  </select>
+		  <p>Total: <span id="applepietotalPrice"></span></p> 
+		  <button type="button" class="btn btn-primary" onclick="addToCart()">Add to Cart</button>
+		  </div>
+		</div> 
+	</div>
+
+	<div class="col-4">
+		<div class="card1" style="width: 25rem;">
+		  <img src="DessertImages/cake.jpg" class="card-img-top" alt="Lava Cake">
+		  <div class="card-body">
+			<h5 class="card-title">Molten Lava Cake - $8</h5>
+			<p class="card-text">Our Molten Lava Cake is lava-licious.  </br>  it's so good, it'll melt your heart!</p>
+		  <select id="lavacakequantity" onchange="findlavacakeQty()"> 
+			<option value="0">Select qty</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+		  </select>
+		  <p>Total: <span id="lavacaketotalPrice"></span></p> 
+		  <button type="button" class="btn btn-primary" onclick="addToCart()">Add to Cart</button>
+		  </div>
+		</div> 
+		</div>
+	</div>
+
+
+<div class="row">
+	<div class="col-4">
+		<div class="card1" style="width: 25rem;">
+		  <img src="DessertImages/piepecan.jpg" class="card-img-top" alt="Pecan Pie">
+		  <div class="card-body">
+			<h5 class="card-title">Pecan Pie - $7</h5>
+			<p class="card-text">Our Pecan Pie is pecan-tastic.</br>it's so good, you'll go nuts for another slice</p>
+		  <select id="pecanpiequantity" onchange="findpecanpieQty()">
+			<option value="0">Select qty</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+		  </select> 
+		  <p>Total: <span id="pecanpietotalPrice"></span></p>
+		  <button type="button" class="btn btn-primary" onclick="addToCart()">Add to Cart</button>
+		  </div>
+		</div> 
+	</div> 
+
+	<div class="col-4">
+		<div class="card1" style="width: 25rem;">
+		  <img src="DessertImages/BananaSplit.jpg" class="card-img-top" alt="Banana Split">
+		  <div class="card-body">
+			<h5 class="card-title">Banana Split - $9</h5>
+			<p class="card-text">Our Banana Split is Split-tacular.  </br>  it's the split desision you won't regret!</p>
+		  <select id="bananaquantity" onchange="findbananasplitQty()">
+			<option value="0">Select qty</option>  
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+		  </select>
+		  <p>Total: <span id="bananasplittotalPrice"></span></p> 
+		  <button type="button" class="btn btn-primary" onclick="addToCart()">Add to cart</button>
+		  </div>
+		</div> 
+	</div> 
+	
+	<div class="col-4">
+		<div class="card1" style="width: 25rem;">
+		  <img src="DessertImages/StrawberryShortcake.jpg" class="card-img-top" alt="Stawberry Shortcake">
+		  <div class="card-body">
+			<h5 class="card-title">Stawberry Shortcake - $6</h5>
+			<p class="card-text">Our Stawberry Shortcake is berry delicious.</br>it'll leave you short of words!</p>
+		  <select id="strawquantity" onchange="findstrawberryshortcakeQty()">
+			<option value="0">Select qty</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+		  </select>
+		  <p>Total: <span id="shortcaketotalPrice"></span></p> 
+		  <button type="button" class="btn btn-primary" onclick="addToCart()">Add to cart</button>
+		  </div>
+		</div>
+	</div>
+</div>
+
+</div>
+</html>
